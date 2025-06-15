@@ -1,47 +1,76 @@
+---
+title: Abusive Comment Detection
+emoji: 🔥
+colorFrom: red
+colorTo: green
+sdk: gradio
+sdk_version: 3.29.0
+app_file: app.py
+pinned: false
+---
+
+## 🚀 Live Demo on Hugging Face Spaces
+
+You can try out this project live on Hugging Face Spaces:
+[Here](https://huggingface.co/spaces/neel692/Abusive-Comment-Detection)
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
 # Abusive Comment Detection
 
-A machine learning project to detect abusive comments.
+A machine learning-based system for detecting abusive comments in text. This project uses natural language processing to identify potentially harmful or inappropriate content.
 
-## 🚀 Deployment
+## Features
 
-This project is also deployed on [Hugging Face Spaces](https://huggingface.co/spaces/neel692/Abusive-Comment-Detection/tree/main).
+- Text classification for abusive content detection
+- Language detection support
+- Web interface for easy interaction
+- API endpoint for integration with other systems
 
-## 🛠️ Setup
+## Installation
 
 1. Clone the repository:
-   ```sh
-   git clone https://github.com/Neelkamal692/Abusive-Comment-Detection.git
-   cd Abusive-Comment-Detection
-   ```
-2. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. Create a `.env` file and add your secrets (do not commit this file):
-   ```
-   HF_TOKEN=your_huggingface_token
-   ```
+```bash
+git clone https://github.com/yourusername/Abusive-Comment-Detection.git
+cd Abusive-Comment-Detection
+```
 
-## 🏃 Usage
+2. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-```sh
+## Usage
+
+1. Run the web application:
+```bash
 python app.py
 ```
 
-## 🤗 Hugging Face Space
+2. Access the web interface at `http://localhost:7860`
 
-Check out the live demo: [Hugging Face Space](https://huggingface.co/spaces/neel692/Abusive-Comment-Detection)
+## Project Structure
 
----
+- `app.py`: Main application file with the web interface
+- `language_detection.py`: Language detection functionality
+- `clean.py`: Text preprocessing utilities
+- `model_joblib.pkl`: Trained model for abuse detection
+- `requirements.txt`: Project dependencies
 
-## 3. **Final Checklist Before Pushing to GitHub**
-- [ ] No secrets in code or history
-- [ ] `.env` in `.gitignore`
-- [ ] `requirements.txt` present
-- [ ] `README.md` updated with Hugging Face info
-- [ ] Code is clean and documented
+## Dependencies
 
----
+The project requires Python 3.7+ and the following main packages:
+- gradio
+- scikit-learn
+- pandas
+- numpy
 
-**Let me know if you want me to generate or update any of these files for you!**  
-If you provide your Hugging Face Space link, I can add it directly to your `README.md`.
+See `requirements.txt` for the complete list of dependencies.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
