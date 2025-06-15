@@ -7,6 +7,7 @@ nltk.download('wordnet')
 import numpy as np
 import language_detection
 import requests
+import os
 
 print("all imports worked")
 # Load pre-trained model
@@ -15,9 +16,11 @@ print("model load ")
 tf = joblib.load('tf_joblib.pkl')
 print("tfidf load ")
 
+token = os.getenv("HF_TOKEN")
+
 def query(payload):
     API_URL = "https://api-inference.huggingface.co/models/Hate-speech-CNERG/hindi-abusive-MuRIL"
-    headers = {"Authorization": "Bearer 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"}
+    headers = {"Authorization": f"Bearer {token}"}
     response = requests.post(API_URL, headers=headers, json=payload)
     return response.json()
     
